@@ -4,9 +4,8 @@ import java.util.List;
 import reading.Utils;
 
 public class Day1Code {
-    public static void main(String args[]){
-        Utils utils = new Utils();
-        List<Integer> input = utils.getInputPart1();
+    public static void main(String[] args){
+        List<Integer> input = Utils.getInputPart1();
         part1(input);
         part2(input);
     }

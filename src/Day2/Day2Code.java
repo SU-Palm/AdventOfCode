@@ -5,9 +5,8 @@ import reading.Utils;
 import java.util.List;
 
 public class Day2Code {
-    public static void main(String args[]){
-        Utils utils = new Utils();
-        List<String> input = utils.getInputPart2();
+    public static void main(String[] args){
+        List<String> input = Utils.getInputPart2();
         part1(input);
         part2(input);
     }
