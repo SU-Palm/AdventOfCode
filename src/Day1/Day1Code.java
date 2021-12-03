@@ -1,13 +1,12 @@
 package Day1;
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Scanner; // Import the Scanner class to read text files
+import reading.Utils;
 
 public class Day1Code {
     public static void main(String args[]){
-        List<Integer> input = getInput();
+        Utils utils = new Utils();
+        List<Integer> input = utils.getInputPart1();
         part1(input);
         part2(input);
     }
@@ -34,22 +33,5 @@ public class Day1Code {
             prev = threeSumDepth;
         }
         System.out.println(counter);
-    }
-
-    private static List<Integer> getInput() {
-        List<Integer> input = new ArrayList<Integer>();
-        try {
-            File myObj = new File("C:\\Users\\jmbal\\IdeaProjects\\AdventOfCode\\src\\Day1\\input.txt");
-            Scanner myReader = new Scanner(myObj);
-            while(myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                input.add(Integer.parseInt(data));
-            }
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-        return input;
     }
 }
